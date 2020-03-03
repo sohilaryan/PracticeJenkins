@@ -12,6 +12,7 @@ import cucumber.api.junit.Cucumber;
 		,dryRun=false
 		,plugin= {"pretty", "html:target/html/cucumber-default-report", "json:target/cucumber.json"}
 		,monochrome=true
+		,strict=false		
 		,tags= {"@Test"}
 		)
 
