@@ -11,8 +11,7 @@ import cucumber.api.junit.Cucumber;
 		,glue="com/hrms/steps"
 		,dryRun=false
 		,plugin= {"pretty", "html:target/html/cucumber-default-report", "json:target/cucumber.json"}
-		,monochrome=true
-		,strict=false		
+		,monochrome=true		
 		,tags= {"@Test"}
 		)
 
