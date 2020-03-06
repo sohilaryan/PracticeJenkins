@@ -63,6 +63,7 @@
 					</includes>
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration> -->
+				
 			</plugin>
 
 			<plugin>
