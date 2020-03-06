@@ -59,7 +59,7 @@
 				<version>3.0.0-M4</version>
 				<configuration>
 					<includes>
-						<include>**/*SmokeRunner.java</include>
+						<!-- <include>**/*SmokeRunner.java</include>-->
 					</includes>
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
