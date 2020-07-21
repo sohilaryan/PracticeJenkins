@@ -15,16 +15,21 @@ public class BaseClass {
 	public static WebDriver driver;
 
 	public static void setUp() {
-		
+
 		ConfigsReader.readProperties(Constants.CREDENTIALS_FILEPATH);
-		
+
 		switch (ConfigsReader.getProperty("browser").toLowerCase()) {
 
 		case "chrome":
 			System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
-			ChromeOptions options=new ChromeOptions();
-			options.setHeadless(true);
-			driver = new ChromeDriver(options);
+			ChromeOptions options = new ChromeOptions();
+			String headless = ConfigsReader.getProperty("headless");
+			if (headless.equalsIgnoreCase("true")) {
+				options.setHeadless(true);
+				driver = new ChromeDriver(options);
+			} else {
+				driver = new ChromeDriver(options);
+			}
 			break;
 		case "firefox":
 			System.setProperty("webdriver.gecko.driver", Constants.GECKO_DRIVER_PATH);
