@@ -1,13 +1,13 @@
 @sprint1 @login
 Feature: Login
 
-  @Test
+  @regression @smoke
   Scenario: Valid  login
     When I enter valid username and valid password
     And I click on login button
     Then I succesfully logged in
 
-  @smoke
+  @smoke @regression
   Scenario: Invalid Login
     When I enter valid username and invalid password
     And I click on login button

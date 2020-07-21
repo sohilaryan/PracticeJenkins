@@ -6,13 +6,13 @@ Feature: Add Employee
     Given I am logged into HRMS
     And I navigated to Add Employee Page
 
-  @smoke
+  @regression
   Scenario: Add new Employee
   When I add "John", "S" and "Smith"
   And I click Save
   Then I see Employee has been succesfully added
   
-  @regression
+  
   Scenario Outline: Add new Employee
   When I add "<FirstName>", "<MiddleName>" and "<LastName>"
   And I click Save
@@ -24,7 +24,7 @@ Feature: Add Employee
   | Jane      | J          | Smith    |
   | Sasha     | J          | Smith    |
   | David     | J          | Smith    |
-  @regression
+  
   Scenario: Add and Modify Employee Details
     When I enter employee details
       | FirstName | MiddleName | LastName |
