@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.hrms.utils.ConfigsReader;
@@ -21,7 +22,9 @@ public class BaseClass {
 
 		case "chrome":
 			System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
-			driver = new ChromeDriver();
+			ChromeOptions options=new ChromeOptions();
+			options.setHeadless(true);
+			driver = new ChromeDriver(options);
 			break;
 		case "firefox":
 			System.setProperty("webdriver.gecko.driver", Constants.GECKO_DRIVER_PATH);
