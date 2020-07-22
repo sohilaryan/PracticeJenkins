@@ -7,7 +7,7 @@ Feature: Login
     And I click on login button
     Then I succesfully logged in
 
-  @smoke @regression
+  @regression
   Scenario: Invalid Login
     When I enter valid username and invalid password
     And I click on login button
