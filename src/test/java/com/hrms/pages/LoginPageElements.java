@@ -30,7 +30,7 @@ public class LoginPageElements extends CommonMethods {
 	@FindBy(css="input#txtPassword")
 	public WebElement password;
 	
-	@FindBy(css="input[name='Submit']")
+	@FindBy(css="input[name='Submitp']")
 	public WebElement loginBtn;
 	
 	@FindBy(id="spanMessage")
